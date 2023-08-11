@@ -1,0 +1,123 @@
+@import "../../styles/global/variables";
+
+.stats-container-jd {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 1.5rem;
+
+  .stat-jd {
+    background-color: #112733;
+    padding: 1rem;
+    border-radius: 10px;
+    // box-shadow: 0 10px 10px 10px #8b8b8b13;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $accent;
+      div {
+        p,
+        .desc {
+          color: $white;
+        }
+      }
+      svg {
+        color: $white;
+      }
+    }
+
+    svg {
+      font-size: 30px;
+      color: $second;
+      box-shadow: 0px 0px 10px 10px #8b8b8b10;
+      border-radius: 50%;
+      background-color: transparent !important;
+    }
+
+    div {
+      color: $second;
+      display: flex;
+      flex-direction: column;
+      text-transform: capitalize;
+      gap: 0.3rem;
+
+      p {
+        font-size: 15px;
+        font-weight: 700;
+        color: $second;
+      }
+
+      .desc {
+        font-size: 17px;
+        font-weight: 700;
+        color: $second;
+      }
+    }
+  }
+}
+
+.loaderAnalytics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.home-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 2rem;
+  margin-top: 2.5rem;
+
+  .chart-container {
+    .chart-head {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      font-size: 17px;
+      font-weight: 700;
+      color: $second;
+
+      .switcher-chart {
+        border: 2px solid $border;
+        border-radius: 50px;
+        cursor: pointer;
+        padding: 5px 10px;
+        font-size: 15px;
+
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+// quick links
+.quick-link-title {
+  margin-top: 2.5rem;
+  padding-bottom: 1rem;
+  font-size: 17px;
+  font-weight: 700;
+  color: $second;
+}
+.quick-links {
+  margin-bottom: 5rem;
+  .stat-jd {
+    border-bottom: 2px solid $accent;
+    min-height: 100px;
+    height: 100px;
+
+    .desc {
+      font-size: 13px !important;
+      font-weight: 400 !important;
+    }
+  }
+}

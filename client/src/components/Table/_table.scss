@@ -1,0 +1,151 @@
+@import "../../styles/global/variables";
+
+.table-container {
+  margin-top: 2.5rem;
+  margin-bottom: 5.5rem;
+}
+
+// table {
+//   input {
+//     border: 1px solid $second !important;
+//   }
+//   thead {
+//     th {
+//       background-color: #f9fafb !important;
+//       border-bottom: 1px solid #8b8b8b35;
+//     }
+//   }
+//   tr:nth-child(even) td {
+//     background-color: #f9fafb !important;
+//   }
+//   tbody {
+//     tr {
+//       border-bottom: 1px solid #8b8b8b35;
+//       &:last-child {
+//         border: none;
+//       }
+//     }
+//     tr .actions {
+//       display: flex;
+//       flex-direction: row;
+//       gap: 10px;
+//       font-size: 27px;
+//       svg {
+//         cursor: pointer;
+//       }
+//     }
+//   }
+// }
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 1rem;
+
+  .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+
+    button {
+      text-transform: capitalize;
+
+      font-size: 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+
+      p {
+        font-size: 15px;
+      }
+    }
+    // .changed {
+    //   background-color: $white;
+    //   border: 5px solid white;
+    //   color: $dash;
+    // }
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .search {
+    form {
+      display: flex;
+      flex-direction: row;
+      input {
+        border-radius: 10px 0 0 10px;
+      }
+      button {
+        font-size: 20px;
+        border-radius: 0 10px 10px 0;
+      }
+    }
+  }
+}
+
+.table-footer {
+  width: 100%;
+  background-color: $white;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 0rem;
+  border-top: 1px solid #8b8b8b35;
+
+  .elms {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      background-color: $white;
+      border: 3px solid #8b8b8b35;
+      color: $dash;
+      text-transform: capitalize;
+    }
+  }
+}
+
+// search bar on restricted pages
+.expand-search {
+  // grid-template-columns: 1fr 1fr !important;
+
+  .actions {
+    // padding-left: 1rem;
+
+    svg {
+      pointer-events: none;
+      font-size: 20px;
+    }
+  }
+}
+
+.small-remove {
+  text-transform: capitalize !important;
+}
+
+.nodata {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding-bottom: 2.5rem;
+  padding-top: 1rem;
+
+  img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+}
